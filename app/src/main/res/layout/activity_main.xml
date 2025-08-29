@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    tools:context=".MainActivity">
+
+    <!-- Верхняя панель с кнопками -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#D03F51B5"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/record_start"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:onClick="startRecording"
+            android:text="Запись"
+            android:background="@color/cardview_dark_background"
+            android:layout_marginEnd="16dp"
+            android:tint="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/record_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:onClick="stopRecording"
+            android:text="Стоп"
+            android:background="@color/cardview_dark_background"
+            android:tint="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- Список записей -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+</LinearLayout>
